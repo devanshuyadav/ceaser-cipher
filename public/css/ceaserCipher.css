@@ -1,0 +1,209 @@
+:root {
+    --theme-dark: #000000;
+    --theme-light: #eeeeee;
+    --background: #fff;
+}
+
+body {
+    background-image: url("../images/bgimg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    font-family: "Montserrat", serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.fas,
+.fab {
+    color: #000;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: (var(--background));
+}
+
+.navbar-nav {
+    border-radius: 50px;
+    padding: 8px 10px;
+    margin: 0 3%;
+    font-size: 1.5rem;
+}
+
+.navbar-home {
+    position: absolute;
+    left: 0;
+}
+
+.main {
+    padding: 0;
+    margin: 0;
+    width: 98vw;
+}
+
+#scroll-top {
+    height: 10vh;
+}
+
+#viewport-1 {
+    background: rgba(255, 255, 255, 0.089);
+    box-shadow: 0 8px 32px 0 rgba(133, 133, 133, 0.37);
+    backdrop-filter: blur(8.0px);
+    -webkit-backdrop-filter: blur(11.0px);
+    border-radius: 40px;
+
+    padding-top: 10vh;
+    margin: 0 auto 20vh auto;
+    width: 70vw;
+    text-align: center;
+    height: 75vh;
+}
+
+/* heading and input part*/
+#input-view {
+    margin: 0 auto;
+    padding: 5vh;
+    width: 60vw;
+    height: 40vh;
+}
+
+#heading {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+input {
+    padding: 20px;
+    margin: 20px 0;
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+#input-msg {
+    width: 40vw;
+    height: 15%;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--theme-light);
+    transform: translateX(5px);
+}
+
+#shift-msg {
+    width: 10vw;
+    height: 15%;
+    background-color: var(--theme-dark);
+    border-radius: 0 50px 50px 0;
+    color: var(--background);
+}
+
+#input-msg::placeholder {
+    color: #8d8d8d;
+}
+
+#shift-msg::placeholder {
+    text-align: center;
+    color: var(--background);
+}
+
+#input-msg:focus::placeholder,
+#shift-msg:focus::placeholder {
+    color: transparent;
+}
+
+/* output */
+#output-view {
+    /* background-color: aqua; */
+    height: 10vh;
+}
+
+#output-msg {
+    font-family: "Mulish", serif;
+    font-size: 1.9rem;
+    padding: 0 5vw;
+}
+
+/* Encrypt and Decrypt Buttons */
+.btn {
+    margin: 0 2vw;
+    border-radius: 30px;
+}
+
+.encrypt-btn,
+.decrypt-btn {
+    font-size: 1.5rem;
+    height: 60px;
+    width: 60px;
+}
+
+/* History and reset */
+#viewport-2 {
+    background: rgba(255, 255, 255, 0.089);
+    box-shadow: 0 8px 32px 0 rgba(133, 133, 133, 0.37);
+    backdrop-filter: blur(8.0px);
+    -webkit-backdrop-filter: blur(11.0px);
+    border-radius: 40px;
+
+    padding: 10vh 0;
+    margin: 0 auto 10vh auto;
+    width: 70vw;
+    height: 100vh;
+    /* background-color: aliceblue; */
+}
+
+#history-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5vh 0;
+}
+
+#history-head h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+#history-head button {
+    position: absolute;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    right: 0;
+}
+
+/* --> history content */
+.grid-container {
+    font-size: 1.2rem;
+    font-weight: 800;
+    display: grid;
+    grid-template-columns: 300px 3vw 4vw 3vw 300px;
+    grid-gap: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    border: none;
+    padding: 1vh;
+    white-space: normal;
+}
+
+.reset-btn {
+    font-size: 1.5rem;
+    border-radius: 50px;
+    color: var(--theme-dark);
+    /* background-color: var(--background); */
+}
+
+/* footer */
+.footer {
+    margin: 1vh 0 10vh 0;
+}
