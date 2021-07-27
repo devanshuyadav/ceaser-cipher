@@ -1,0 +1,89 @@
+<%- include ("partials/header") -%>
+
+    <div class="main">
+        <div id="scroll-top"></div>
+        <!-- input point -->
+        <div id="viewport-1">
+            <div id="input-view">
+                <h1 id="heading">Ceaser Cipher </h1>
+                <form action="/" method="post">
+                    <div>
+                        <input id="input-msg" type="text" name="input" autocomplete="off" placeholder="Enter text">
+                        <input id="shift-msg" type="text" inputmode="numeric" name="shift" autocomplete="off"
+                            placeholder="Shift">
+                    </div>
+                    <button class="btn encrypt-btn" type="submit" name="message" value="encrypt">🔒</button>
+                    <button class="btn decrypt-btn" type="submit" name="message" value="decrypt">🔓</button>
+
+            </div>
+
+            <!-- output point -->
+            <div id="output-view">
+                <p id="output-msg">
+                    <%= outputMsg %>
+                </p>
+            </div>
+        </div>
+
+        <!-- history point -->
+        <div id="viewport-2">
+            <div id="history-head">
+                <h3>
+                    History:
+                </h3>
+                <button class="btn reset-btn" type="submit" name="reset" value="doit">
+                    <i class="fas fa-sync-alt"></i></button>
+            </div>
+            <div class="grid-container history-render">
+                <p class="grid-item">Input</p>
+                <p class="grid-item"></p>
+                <p class="grid-item">Shift</p>
+                <p class="grid-item"></p>
+                <p class="grid-item">Output</p>
+                <% for(var i=0; i < historyInp.length ;i++) { %>
+                    <textarea readonly="readonly" class="grid-item" rows="3">
+                        <%=historyInp[i]%>
+                    </textarea>
+                    <div class="grid-item">
+                        <%= historyOp[i]%>
+                    </div>
+                    <div class="grid-item">
+                        <%= historyShift[i]%>
+                    </div>
+                    <div class="grid-item">
+                        =
+                    </div>
+                    <textarea readonly="readonly" class="grid-item" rows="3">
+                        <%=historyOut[i]%>
+                    </textarea>
+                    <%}%>
+            </div>
+        </div>
+        </form>
+
+    </div>
+    </div>
+
+    <%- include ("partials/footer") -%>
+
+        <!-- <div class="history-head">
+                <h4>Input</h4>
+                <h4>Shift</h4>
+                <h4>Output</h4>
+            </div>
+            <div class="history-item">
+                <% for(var i=0; i < historyInp.length ;i++) { %>
+                    <h5>
+                        <%=historyInp[i]%>
+                    </h5>
+                    <h5>
+                        <%= historyOp[i]%>
+                    </h5>
+                    <h5>
+                        <%= historyShift[i]%>
+                    </h5>
+                    <h5>
+                        <%=historyOut[i]%>
+                    </h5>
+                    <%}%>
+            </div> -->
